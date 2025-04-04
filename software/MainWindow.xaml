@@ -1,0 +1,70 @@
+﻿<Window x:Class="APM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:APM"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Firefighter Emblem Placeholder -->
+        <Image Source="firefighter_emblem.png" Height="90" HorizontalAlignment="Center" />
+
+        <!-- Device Status -->
+        <TextBlock x:Name="DeviceStatusTextBlock"
+                   Grid.Row="1"
+                   Text="WAITING FOR CONNECTION..."
+                   Foreground="#FFA500"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+
+        <!-- Output Display Box -->
+        <Border Grid.Row="2"
+                Margin="0,30,0,0"
+                Background="WhiteSmoke"
+                BorderBrush="#444"
+                BorderThickness="2"
+                CornerRadius="12"
+                Padding="20"
+                HorizontalAlignment="Center"
+                Width="400"
+                Height="170">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock x:Name="FlameDetectorText"
+                           Text="No Flame Detected"
+                           FontSize="20"
+                           FontWeight="SemiBold"
+                           Foreground="#32CD32"
+                           TextAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Margin="0,5"/>
+
+                <TextBlock x:Name="ObjectDetectorText"
+                           Text="No Object Detected"
+                           FontSize="20"
+                           FontWeight="SemiBold"
+                           Foreground="#32CD32"
+                           TextAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Margin="0,5"/>
+
+                <TextBlock x:Name="GasDetectorText"
+                           Text="No Gas Detected"
+                           FontSize="20"
+                           FontWeight="SemiBold"
+                           Foreground="#32CD32"
+                           TextAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Margin="0,5"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
